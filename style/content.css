@@ -1,0 +1,150 @@
+#container > main {
+    grid-area: main;
+    width: 100vw;
+    max-width:100%;
+    box-sizing: border-box;
+    display:grid;
+    grid-template-columns: repeat(24, 1fr);
+    /* grid-template-rows: 40vh auto 20vh auto 20vh auto 20vh; */
+    /* Temoporarily disable */
+    grid-template-rows: 10vh auto 20vh auto 20vh;
+}
+@media only screen and (min-width:750px) {
+    #container > main {
+        /* grid-template-rows: 60vh auto 20vh auto 20vh auto 20vh; */
+
+        /* Temoporarily disable */
+        grid-template-rows: 20vh auto 20vh auto 20vh;
+    }
+}
+#container > main > section {
+    background-color:white;
+    padding:20px;
+    grid-column:3 / span 20
+}
+@media only screen and (min-width:1000px) {
+    #container > main > section {
+        grid-column: 5 / span 16 !important;
+    }
+}
+/* ||||||||||||||||| EVENTS |||||||||||||||| */
+#container > main .events {
+    grid-column:3 / span 20;
+    grid-row: 2 / span 1;
+    min-height:300px;
+    /* Temoporarily disable */
+    display:none;
+}
+#container > main .events > header h2 {
+    color: #004D8E;
+    font-size:4rem;
+    line-height: 1rem;
+    position:relative;
+    top:-30px;
+    left:30px;
+}
+#container > main .events > header h2 span {
+    color: #F8CDCE;
+    font-size:1rem;
+    line-break: strict;
+}
+/* ||||||||||||||||| CONTACT |||||||||||||||| */
+#container > main .contact {
+    position:relative;
+    padding:0;
+    grid-column: 3 / span 20;
+    grid-row: 4 / span 1;
+
+    /* Temoporarily disable */
+    grid-row: 2 / span 1;
+    max-width: 100%;
+    overflow:hidden;
+}
+@media only screen and (min-width:1000px) {
+    #container > main .contact {
+        grid-column: 5 / span 6 !important;
+    }
+}
+#container > main .contact main {
+    padding:0;
+    margin:0;
+    background-color: #004D8E;
+}
+#container > main .contact main img {
+    max-width: 100%;
+    margin:0;
+    padding:0;
+}
+#container > main .contact footer {
+    background-color: #004D8E;
+    color:white;
+    font-weight: bold;
+    text-align: center;
+    padding:15px 15px 19px 15px;
+}
+#container > main .contact footer a {
+    color:white;
+    text-decoration: none;
+}
+/* ||||||||||||||||| OPENINGSUREN |||||||||||||||| */
+#container > main .openingsUren {
+    position: relative;
+    grid-column:3 / span 20;
+    grid-row: 6 / span 1;
+
+    /* Temoporarily disable */
+    grid-row: 4 / span 1;
+    max-width: 100%;
+    
+    display: grid;
+    grid-template-columns: auto 200px auto;
+    grid-template-rows: 39px 1fr 80px;
+    grid-template-areas: 
+        '. header .'
+        '. list .'
+        '. adres .';
+}
+@media only screen and (min-width:1000px) {
+    #container > main .openingsUren {
+        grid-column: 12 / span 9 !important;
+        grid-row: 4 / span 1;
+        grid-template-columns: auto 80% auto;
+        
+        /* Temoporarily disable */
+        grid-row: 2 / span 1;
+    }
+}
+#container > main .openingsUren header {
+    grid-area: header;
+    text-align: center;
+}
+#container > main .openingsUren header h2 {
+    font-size: 24px;
+}
+#container > main .openingsUren ul {
+    grid-area: list;
+    padding: 0 5px;
+}
+#container > main .openingsUren ul li {
+    display: flex;
+    justify-content: space-between;
+    color: #EC7C81;
+}
+#container > main .openingsUren ul li.list-title {
+    margin-top:20px;
+}
+#container > main .openingsUren ul li span {
+    color:#004D8E;
+}
+#container > main .openingsUren p {
+    grid-area: adres;
+    padding:20px 5px;
+}
+#container > main .openingsUren .color-bottom {
+    background-color: #F8CDCE;
+    position:absolute;
+    bottom:0;
+    left:0;
+    right:0;
+    height: 20px;
+}

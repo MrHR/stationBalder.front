@@ -1,0 +1,142 @@
+/*
+Theme Name: Station Balder
+Theme URI: 
+Author: ...
+Author URI: 
+Description: Wordpress Theme
+Version: 1.0
+*/
+body, html, div, h1, h2, span, p, ul, li {
+    padding:0;
+    margin:0;
+}
+body, html {
+    font-family: 'Quicksand', sans-serif;
+}
+h1, h2, h3, h4 {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 700;
+    color:#004D8E;
+}
+p {
+    color: #004D8E;
+}
+ul {
+    list-style:none;
+}
+body {
+    background-image: url('../assets/img/bg-top.svg');
+    background-size: 800px;
+    background-repeat: no-repeat;
+    background-position: top;
+    background-position-x: 0;
+    background-color:#39d660;
+}
+@media only screen and (min-width:650px) {
+    body {
+        background-size: cover;
+    }
+}
+@media only screen and (min-width:1000px) {
+    body {
+        background-position-y: -200px;
+    }
+}
+.hide {
+    display:none !important;
+}
+button, li, a {
+    cursor: pointer;
+}
+#container{
+    height:100vh;
+    display:grid;
+    grid-template-columns: 1fr 90% 1fr;
+    grid-template-rows:80px 1fr;
+    grid-column-gap: 10px;
+    grid-template-areas:
+        'header header header'
+        'main main main';
+}
+#container > header {
+    grid-area: header;
+    padding:10px;
+    position:relative;
+    background-color:white;
+}
+@media only screen and (min-width: 700px) {
+    #container > header {
+        padding:30px;
+    }
+}
+#container > header > section {
+    width:100%;
+    height:100%;
+    box-sizing: border-box;
+    display: grid;
+    grid-template-columns: 28px auto 50px;
+    grid-template-rows: auto;
+    grid-template-areas: 
+        'menuButton . logo';
+    align-content: center;
+}
+#container > header > section img {
+    grid-area: logo;
+    width:100%;
+    height: 100%;
+    justify-self: end;
+}
+#container > header > section button {
+    grid-area: menuButton;
+    padding:0;
+    margin:0;
+    width:100%;
+    height:18px;
+    background-image: url('../assets/svg/icon-menu.png');
+    background-size: contain;
+    background-color: transparent;
+    background-repeat: no-repeat;
+    border:none;
+    align-self: center;
+}
+#container > header nav {
+    position:fixed;
+    height:100vh;
+    top:0;
+    left:0;
+    background-color: pink;
+    width:80%;
+    max-width: 300px;
+    padding:30px;
+    margin:0;
+    box-sizing: border-box;
+    display: grid;
+    grid-template-rows: 28px auto;
+    z-index: 1000;
+}
+#container > header nav button {
+    background-image: url('../assets/svg/icon-menu-close.png');
+    background-size: contain;
+    background-color: transparent;
+    background-repeat: no-repeat;
+    border:none;
+    width: 28px;
+    height: 28px;
+    top:10px;
+    right:10px;
+    justify-self: end;
+}
+#container > header nav ul {
+    list-style:none;
+    margin-top:10px;
+}
+#container> header nav ul li {
+    padding:10px;
+    margin:10px;
+    color:#004D8E;
+    font-weight: 800;
+}
+#container > header nav ul li:hover {
+    background-color:#EC7C81;
+    color:white;
+}
